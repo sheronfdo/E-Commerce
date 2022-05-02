@@ -1,14 +1,14 @@
 <?php
 class EmployeeService
 {
-    public $employeeId;
-    public $fName;
-    public $lName;
-    public $nic;
-    public $address;
-    public $dateOfBirth;
-    public $gender;
-    public $dateOfRegister;
+    private $employeeId;
+    private $fName;
+    private $lName;
+    private $nic;
+    private $address;
+    private $dateOfBirth;
+    private $gender;
+    private $dateOfRegister;
 
     /**
      * @return mixed
