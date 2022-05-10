@@ -8,6 +8,37 @@ class SaleDeliveryInfo
     private $contactNo;
 
     /**
+     * @param $saleDeliveryId
+     * @param $sasleId
+     * @param $receiverName
+     * @param $address
+     * @param $contactNo
+     */
+    public function __constructWithId($saleDeliveryId, $sasleId, $receiverName, $address, $contactNo)
+    {
+        $this->saleDeliveryId = $saleDeliveryId;
+        $this->sasleId = $sasleId;
+        $this->receiverName = $receiverName;
+        $this->address = $address;
+        $this->contactNo = $contactNo;
+    }
+
+    /**
+     * @param $sasleId
+     * @param $receiverName
+     * @param $address
+     * @param $contactNo
+     */
+    public function __constructWithoutId($sasleId, $receiverName, $address, $contactNo)
+    {
+        $this->sasleId = $sasleId;
+        $this->receiverName = $receiverName;
+        $this->address = $address;
+        $this->contactNo = $contactNo;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getSaleDeliveryId()

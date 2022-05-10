@@ -14,6 +14,60 @@ class Customer
     private $dateOfJoined;
 
     /**
+     * @param $customerId
+     * @param $username
+     * @param $password
+     * @param $firstName
+     * @param $lastName
+     * @param $email
+     * @param $gender
+     * @param $mobileNo
+     * @param $address
+     * @param $dateOfBirth
+     * @param $dateOfJoined
+     */
+    public function __constructWithId($customerId, $username, $password, $firstName, $lastName, $email, $gender, $mobileNo, $address, $dateOfBirth, $dateOfJoined)
+    {
+        $this->customerId = $customerId;
+        $this->username = $username;
+        $this->password = $password;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->email = $email;
+        $this->gender = $gender;
+        $this->mobileNo = $mobileNo;
+        $this->address = $address;
+        $this->dateOfBirth = $dateOfBirth;
+        $this->dateOfJoined = $dateOfJoined;
+    }
+
+    /**
+     * @param $username
+     * @param $password
+     * @param $firstName
+     * @param $lastName
+     * @param $email
+     * @param $gender
+     * @param $mobileNo
+     * @param $address
+     * @param $dateOfBirth
+     * @param $dateOfJoined
+     */
+    public function __constructWithoutId($username, $password, $firstName, $lastName, $email, $gender, $mobileNo, $address, $dateOfBirth, $dateOfJoined)
+    {
+        $this->username = $username;
+        $this->password = $password;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->email = $email;
+        $this->gender = $gender;
+        $this->mobileNo = $mobileNo;
+        $this->address = $address;
+        $this->dateOfBirth = $dateOfBirth;
+        $this->dateOfJoined = $dateOfJoined;
+    }
+
+    /**
      * @return mixed
      */
     public function getCustomerId()

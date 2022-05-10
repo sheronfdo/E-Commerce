@@ -13,6 +13,58 @@ class UserType
     private $shipment;
 
     /**
+     * @param $positionId
+     * @param $description
+     * @param $sale
+     * @param $book
+     * @param $stock
+     * @param $employee
+     * @param $customer
+     * @param $order
+     * @param $user
+     * @param $shipment
+     */
+    public function __constructWithId($positionId, $description, $sale, $book, $stock, $employee, $customer, $order, $user, $shipment)
+    {
+        $this->positionId = $positionId;
+        $this->description = $description;
+        $this->sale = $sale;
+        $this->book = $book;
+        $this->stock = $stock;
+        $this->employee = $employee;
+        $this->customer = $customer;
+        $this->order = $order;
+        $this->user = $user;
+        $this->shipment = $shipment;
+    }
+
+
+    /**
+     * @param $description
+     * @param $sale
+     * @param $book
+     * @param $stock
+     * @param $employee
+     * @param $customer
+     * @param $order
+     * @param $user
+     * @param $shipment
+     */
+    public function __constructWithoutId($description, $sale, $book, $stock, $employee, $customer, $order, $user, $shipment)
+    {
+        $this->description = $description;
+        $this->sale = $sale;
+        $this->book = $book;
+        $this->stock = $stock;
+        $this->employee = $employee;
+        $this->customer = $customer;
+        $this->order = $order;
+        $this->user = $user;
+        $this->shipment = $shipment;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getPositionId()

@@ -7,6 +7,31 @@ class Publisher
     private $contactNo;
 
     /**
+     * @param $publisherId
+     * @param $name
+     * @param $address
+     * @param $contactNo
+     */
+    public function __constructWithId($publisherId, $name, $address, $contactNo)
+    {
+        $this->publisherId = $publisherId;
+        $this->name = $name;
+        $this->address = $address;
+        $this->contactNo = $contactNo;
+    }
+    /**
+     * @param $name
+     * @param $address
+     * @param $contactNo
+     */
+    public function __constructWithoutId($name, $address, $contactNo)
+    {
+        $this->name = $name;
+        $this->address = $address;
+        $this->contactNo = $contactNo;
+    }
+
+    /**
      * @return mixed
      */
     public function getPublisherId()

@@ -11,6 +11,48 @@ class Stock
     private $releaseDate;
 
     /**
+     * @param $stockId
+     * @param $bookId
+     * @param $batchNumber
+     * @param $description
+     * @param $pages
+     * @param $bookPrice
+     * @param $quantity
+     * @param $releaseDate
+     */
+    public function __constructWithId($stockId, $bookId, $batchNumber, $description, $pages, $bookPrice, $quantity, $releaseDate)
+    {
+        $this->stockId = $stockId;
+        $this->bookId = $bookId;
+        $this->batchNumber = $batchNumber;
+        $this->description = $description;
+        $this->pages = $pages;
+        $this->bookPrice = $bookPrice;
+        $this->quantity = $quantity;
+        $this->releaseDate = $releaseDate;
+    }
+
+    /**
+     * @param $bookId
+     * @param $batchNumber
+     * @param $description
+     * @param $pages
+     * @param $bookPrice
+     * @param $quantity
+     * @param $releaseDate
+     */
+    public function __constructWithoutId($bookId, $batchNumber, $description, $pages, $bookPrice, $quantity, $releaseDate)
+    {
+        $this->bookId = $bookId;
+        $this->batchNumber = $batchNumber;
+        $this->description = $description;
+        $this->pages = $pages;
+        $this->bookPrice = $bookPrice;
+        $this->quantity = $quantity;
+        $this->releaseDate = $releaseDate;
+    }
+
+    /**
      * @return mixed
      */
     public function getStockId()

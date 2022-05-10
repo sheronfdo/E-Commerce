@@ -8,6 +8,23 @@ class CreditCardDetail
     private $customerId;
 
     /**
+     * @param $cardNumber
+     * @param $cardHolder
+     * @param $validDate
+     * @param $cvv
+     * @param $customerId
+     */
+    public function __construct($cardNumber, $cardHolder, $validDate, $cvv, $customerId)
+    {
+        $this->cardNumber = $cardNumber;
+        $this->cardHolder = $cardHolder;
+        $this->validDate = $validDate;
+        $this->cvv = $cvv;
+        $this->customerId = $customerId;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getCardNumber()

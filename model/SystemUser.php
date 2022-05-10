@@ -1,11 +1,42 @@
 <?php
-class SystemUserService
+class SystemUser
 {
     private $userId;
     private $employeeId;
     private $userTypePositionId;
     private $username;
     private $password;
+
+    /**
+     * @param $userId
+     * @param $employeeId
+     * @param $userTypePositionId
+     * @param $username
+     * @param $password
+     */
+    public function __constructWithId($userId, $employeeId, $userTypePositionId, $username, $password)
+    {
+        $this->userId = $userId;
+        $this->employeeId = $employeeId;
+        $this->userTypePositionId = $userTypePositionId;
+        $this->username = $username;
+        $this->password = $password;
+    }
+
+
+    /**
+     * @param $employeeId
+     * @param $userTypePositionId
+     * @param $username
+     * @param $password
+     */
+    public function __constructWithoutId($employeeId, $userTypePositionId, $username, $password)
+    {
+        $this->employeeId = $employeeId;
+        $this->userTypePositionId = $userTypePositionId;
+        $this->username = $username;
+        $this->password = $password;
+    }
 
     /**
      * @return mixed

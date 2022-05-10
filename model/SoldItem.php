@@ -9,6 +9,41 @@ class SoldItem
     private $total;
 
     /**
+     * @param $soldItemId
+     * @param $stockId
+     * @param $saleId
+     * @param $quantity
+     * @param $unitPrice
+     * @param $total
+     */
+    public function __constructWithId($soldItemId, $stockId, $saleId, $quantity, $unitPrice, $total)
+    {
+        $this->soldItemId = $soldItemId;
+        $this->stockId = $stockId;
+        $this->saleId = $saleId;
+        $this->quantity = $quantity;
+        $this->unitPrice = $unitPrice;
+        $this->total = $total;
+    }
+
+    /**
+     * @param $stockId
+     * @param $saleId
+     * @param $quantity
+     * @param $unitPrice
+     * @param $total
+     */
+    public function __constructWithoutId($stockId, $saleId, $quantity, $unitPrice, $total)
+    {
+        $this->stockId = $stockId;
+        $this->saleId = $saleId;
+        $this->quantity = $quantity;
+        $this->unitPrice = $unitPrice;
+        $this->total = $total;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getSoldItemId()

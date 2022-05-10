@@ -12,6 +12,52 @@ class Sale
     private $isFinished;
 
     /**
+     * @param $saleId
+     * @param $customerId
+     * @param $dateAndTime
+     * @param $subTotal
+     * @param $discount
+     * @param $netTotal
+     * @param $orderStatus
+     * @param $isApproved
+     * @param $isFinished
+     */
+    public function __constructWithId($saleId, $customerId, $dateAndTime, $subTotal, $discount, $netTotal, $orderStatus, $isApproved, $isFinished)
+    {
+        $this->saleId = $saleId;
+        $this->customerId = $customerId;
+        $this->dateAndTime = $dateAndTime;
+        $this->subTotal = $subTotal;
+        $this->discount = $discount;
+        $this->netTotal = $netTotal;
+        $this->orderStatus = $orderStatus;
+        $this->isApproved = $isApproved;
+        $this->isFinished = $isFinished;
+    }
+    /**
+     * @param $customerId
+     * @param $dateAndTime
+     * @param $subTotal
+     * @param $discount
+     * @param $netTotal
+     * @param $orderStatus
+     * @param $isApproved
+     * @param $isFinished
+     */
+    public function __constructWithoutId($customerId, $dateAndTime, $subTotal, $discount, $netTotal, $orderStatus, $isApproved, $isFinished)
+    {
+        $this->customerId = $customerId;
+        $this->dateAndTime = $dateAndTime;
+        $this->subTotal = $subTotal;
+        $this->discount = $discount;
+        $this->netTotal = $netTotal;
+        $this->orderStatus = $orderStatus;
+        $this->isApproved = $isApproved;
+        $this->isFinished = $isFinished;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getSaleId()

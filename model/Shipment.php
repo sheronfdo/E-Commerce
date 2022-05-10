@@ -7,6 +7,34 @@ class Shipment
     private $isDelivered;
 
     /**
+     * @param $shipmentId
+     * @param $saleId
+     * @param $systemUser
+     * @param $isDelivered
+     */
+    public function __constructWithId($shipmentId, $saleId, $systemUser, $isDelivered)
+    {
+        $this->shipmentId = $shipmentId;
+        $this->saleId = $saleId;
+        $this->systemUser = $systemUser;
+        $this->isDelivered = $isDelivered;
+    }
+
+    /**
+     * @param $saleId
+     * @param $systemUser
+     * @param $isDelivered
+     */
+    public function __constructWithoutId($saleId, $systemUser, $isDelivered)
+    {
+        $this->saleId = $saleId;
+        $this->systemUser = $systemUser;
+        $this->isDelivered = $isDelivered;
+    }
+
+
+
+    /**
      * @return mixed
      */
     public function getShipmentId()
