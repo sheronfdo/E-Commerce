@@ -6,6 +6,28 @@ class Author
     private $specialName;
 
     /**
+     * @param $authorId
+     * @param $name
+     * @param $specialName
+     */
+    public function __constructWithId($authorId, $name, $specialName)
+    {
+        $this->authorId = $authorId;
+        $this->name = $name;
+        $this->specialName = $specialName;
+    }
+    
+    /**
+     * @param $name
+     * @param $specialName
+     */
+    public function __constructWithoutId($name, $specialName)
+    {
+        $this->name = $name;
+        $this->specialName = $specialName;
+    }
+
+    /**
      * @return mixed
      */
     public function getAuthorId()

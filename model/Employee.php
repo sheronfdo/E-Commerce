@@ -1,5 +1,5 @@
 <?php
-class EmployeeService
+class Employee
 {
     private $employeeId;
     private $fName;
@@ -9,6 +9,49 @@ class EmployeeService
     private $dateOfBirth;
     private $gender;
     private $dateOfRegister;
+
+    /**
+     * @param $employeeId
+     * @param $fName
+     * @param $lName
+     * @param $nic
+     * @param $address
+     * @param $dateOfBirth
+     * @param $gender
+     * @param $dateOfRegister
+     */
+    public function __constructWithId($employeeId, $fName, $lName, $nic, $address, $dateOfBirth, $gender, $dateOfRegister)
+    {
+        $this->employeeId = $employeeId;
+        $this->fName = $fName;
+        $this->lName = $lName;
+        $this->nic = $nic;
+        $this->address = $address;
+        $this->dateOfBirth = $dateOfBirth;
+        $this->gender = $gender;
+        $this->dateOfRegister = $dateOfRegister;
+    }
+
+    /**
+     * @param $fName
+     * @param $lName
+     * @param $nic
+     * @param $address
+     * @param $dateOfBirth
+     * @param $gender
+     * @param $dateOfRegister
+     */
+    public function __constructWithoutId($fName, $lName, $nic, $address, $dateOfBirth, $gender, $dateOfRegister)
+    {
+        $this->fName = $fName;
+        $this->lName = $lName;
+        $this->nic = $nic;
+        $this->address = $address;
+        $this->dateOfBirth = $dateOfBirth;
+        $this->gender = $gender;
+        $this->dateOfRegister = $dateOfRegister;
+    }
+
 
     /**
      * @return mixed
