@@ -5,6 +5,24 @@ class BookWriter
     private $authorId;
 
     /**
+     * @param $bookId
+     * @param $authorId
+     */
+    public function __constructWithId($bookId, $authorId)
+    {
+        $this->bookId = $bookId;
+        $this->authorId = $authorId;
+    }
+    /**
+     * @param $authorId
+     */
+    public function __constructWithoutId($authorId)
+    {
+        $this->authorId = $authorId;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getBookId()

@@ -16,7 +16,7 @@ class Author
         $this->name = $name;
         $this->specialName = $specialName;
     }
-    
+
     /**
      * @param $name
      * @param $specialName

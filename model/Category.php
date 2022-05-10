@@ -5,6 +5,24 @@ class Category
     private $name;
 
     /**
+     * @param $categoryId
+     * @param $name
+     */
+    public function __constructWithId($categoryId, $name)
+    {
+        $this->categoryId = $categoryId;
+        $this->name = $name;
+    }
+
+    /**
+     * @param $name
+     */
+    public function __constructWithoutId($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
      * @return mixed
      */
     public function getCategoryId()

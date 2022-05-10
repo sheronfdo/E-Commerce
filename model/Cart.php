@@ -5,6 +5,16 @@ class Cart
     private $bookId;
 
     /**
+     * @param $customerId
+     * @param $bookId
+     */
+    public function __construct($customerId, $bookId)
+    {
+        $this->customerId = $customerId;
+        $this->bookId = $bookId;
+    }
+
+    /**
      * @return mixed
      */
     public function getCustomerId()

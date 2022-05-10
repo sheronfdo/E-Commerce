@@ -1,10 +1,41 @@
 <?php
-class Book{
+class Book
+{
     private $bookId;
     private $name;
     private $publisherId;
     private $categoryId;
     private $description;
+
+    /**
+     * @param $bookId
+     * @param $name
+     * @param $publisherId
+     * @param $categoryId
+     * @param $description
+     */
+    public function __constructWithId($bookId, $name, $publisherId, $categoryId, $description)
+    {
+        $this->bookId = $bookId;
+        $this->name = $name;
+        $this->publisherId = $publisherId;
+        $this->categoryId = $categoryId;
+        $this->description = $description;
+    }
+    /**
+     * @param $name
+     * @param $publisherId
+     * @param $categoryId
+     * @param $description
+     */
+    public function __constructWithoutId($name, $publisherId, $categoryId, $description)
+    {
+        $this->name = $name;
+        $this->publisherId = $publisherId;
+        $this->categoryId = $categoryId;
+        $this->description = $description;
+    }
+
 
     /**
      * @return mixed
