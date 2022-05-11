@@ -1,16 +1,46 @@
 <?php
-class dbConnect
+final class dbConnect
 {
-    private $servername = "localhost";
-    private $username = "root";
-    private $password = "Jamith@5000";
-    private $dbName = "bookstore";
-    
-    private $conn =  mysqli_connect($servername, $username, $password, $dbName);
+    public $servername = "localhost";
+    public $username = "root";
+    public $password = "Jamith@5000";
+    public $dbName = "bookstore";
+    public $conn = null;
+    // Create connection
 
-    public function getConn(){
-        $conn = null;
-        return self::$conn;
+
+    public function checkDb()
+    {
+        if (is_null($this->conn)) {
+            $this->conn = mysqli_connect($this->servername, $this->username, $this->password, $this->dbName);
+        }
+        // Check connection
+        if (!$this->conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
     }
-    
+
+    public function getConnection()
+    {
+        $this->checkDb();
+        return $this->conn;
+    }
+
+    public function insertIntoDb($query)
+    {
+        $this->checkDb();
+        if (!mysqli_query($this->conn, $query)) {
+            echo "ERROR: Could not able to execute $query. " . mysqli_error($this->conn);
+        }
+    }
+
+    public function getfromdb($query)
+    {
+        $this->checkDb();
+        if ($result = mysqli_query($this->conn, $query)) {
+            return $result;
+        } else {
+            echo "ERROR: Could not able to execute $query. " . mysqli_error($this->conn);
+        }
+    }
 }
